@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
+  /*box-sizing: border-box;*/
 }
 
 
@@ -9,17 +10,15 @@ body {
   height: 100vh;
   background: linen;
   color: black;
-
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
-  margin: 20px;
+  /*margin: 20px;*/
   align-items: center;
   justify-content: center;
   gap: 30px;
-  width: 100%;
   height: 70px;
   line-height: 75px;
 
@@ -51,21 +50,18 @@ a {
 
 }
 
-.grid-parent1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 20px
+.image-big-news {
+  @media (max-width: 768px){
+    height: 100%;
+    width: 220px;
+  }
 }
 
-.grid-item {
-  background: rgb(231, 221, 213);
-
-}
-
-.big-news-image {
+.grid-item-grid-big-news {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
+  margin-bottom: 30px;
 }
 
 
@@ -75,23 +71,31 @@ a {
   font-family: Georgia, serif;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  /*padding: 50px;*/
 }
 
 .other-news {
-  display: grid;
-  margin: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column: span 8;
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  gap: 10px;
   row-gap: 5px;
   height: 200px;
+@media (max-width: 768px){
+  flex-direction: column;
+}
+  
 }
 
 .small-news-image {
-  width: 335px;
-  height: 335px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
+  @media (max-width: 768px){
+    width: 220px;
+    height: 220px;
+  }
+
 }
 
 
@@ -102,12 +106,12 @@ a {
   object-fit: cover;
 } */
 
-.text-item {
+/*.text-item {
   background: linen;
   font-size: 25px;
 
 
-}
+}*/
 
 
 @media screen and (max-width: 667px) {
@@ -134,7 +138,6 @@ a {
 
   .grid-text-news {
     font-size: 20px;
-    padding: 10px;
   }
 
   .grid-parent1 {
@@ -143,8 +146,8 @@ a {
   }
 
   .big-news-image {
-    width: 335px;
-    height: 335px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
   }
 
@@ -166,8 +169,11 @@ a {
   }
 
   .small-news-image {
-    width: 335px;
+    /*width: 335px;
     height: 335px;
+    object-fit: cover;*/
+    width: 200px;
+    height: 200px;
     object-fit: cover;
   }
 
@@ -176,7 +182,7 @@ a {
 
 
 
-@media screen and (min-width: 668px) and (max-width: 1023px) {
+@media screen and (min-width: 400px) and (max-width: 1023px) {
 
   .navbar {
     gap: 20px;
@@ -223,9 +229,10 @@ a {
     margin: 30px;
   }
 
-  .small-news-image {
-    width: 200px;
-    height: 100%;
+  /*.small-news-image {
+    width: 100%;
+    height: 170px;
     object-fit: cover;
 
-  }
+  }*/
+}
